@@ -13,12 +13,14 @@ public class Filters {
     public int getSquare(int x, int y, int[][] mas1){
         mas = mas1;
         ok = new int[mas1.length][mas1[0].length];
+        check = new int[mas1.length][mas1[0].length];
         List<Point> points =  new ArrayList<>();
         int counter = 0;
+        System.out.println(mas1[x][y]);
         points.add(new Point(x,y, mas1[x][y]));
         check[x][y] = 1;// занести с массив ПРОВЕРЯЛИ
         while(points.size()!=0){
-            if(points.get(0).value > 128){
+            if(points.get(0).value < 128){
                 ok[x][y] = 1;// занести точку в массив ОК
                 counter++;
                 adder(points, points.get(0));
@@ -31,6 +33,7 @@ public class Filters {
                     s = s + 1;
                 }
             }
+
         }
         return s;
     }

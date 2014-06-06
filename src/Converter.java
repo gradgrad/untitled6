@@ -11,7 +11,7 @@ public class Converter {
 
         for (int row = 0; row < height; row++) {
             for (int col = 0; col < width; col++) {
-                result[row][col] = image.getRGB(col, row);
+                result[col][row] = image.getRGB(col, row);
             }
         }
         int[][] norm  = normalize(result);

@@ -20,7 +20,7 @@ public class LoadImageApp extends Component{
 
     public LoadImageApp() {
         try {
-            img = ImageIO.read(new File("C:\\Users\\Анна\\Desktop\\MRI\\1.jpg"));
+            img = ImageIO.read(new File("C:\\Users\\Анна\\Desktop\\MRI\\circ.png"));
         } catch (IOException e) {
         }
 

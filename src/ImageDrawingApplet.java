@@ -232,11 +232,12 @@ class ImageDrawingComponent extends Component {
 
 public final class ImageDrawingApplet extends JApplet {
     final static List<String> list = new ArrayList<>();
-    private static String imageFileName = "C:/Users/Анна/Desktop/MRI/1.jpg";
+    private static String imageFileName = "C:/Users/Анна/Desktop/MRI/circ.png";
     private URL imageSrc;
 
     public ImageDrawingApplet(URL imageSrc) {
         this.imageSrc = imageSrc;
+        list.add(imageFileName);
         for (int i = 0; i < 25; i++) {
             list.add("C:/Users/Анна/Desktop/MRI/"+ (i + 1)+ ".jpg");
         }
@@ -295,7 +296,7 @@ public final class ImageDrawingApplet extends JApplet {
                 System.out.println("POINT x = " + e.getX() + "  y = " + e.getY());
                 int[][] array = Converter.convertString(list.get(0));
                 int numOfPoint = (new Filters()).getSquare(e.getX(), e.getY(), array);
-                System.out.println("значение: " + array[e.getY()][e.getX()]);
+                System.out.println("значение: " + array[e.getX()][e.getY()]);
                 /*for(int i = 0; i < 10; i++){
                     System.out.println(list.get(i));
                     int[][] array = Converter.convertString(list.get(i));
